@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Tracker Dashboard</title>
+  <!-- Include Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Fitness Tracker Dashboard</h1>
+  </header>
+
+  <div class="container">
+    <div class="top-section">
+      <!-- Daily Activity Input -->
+      <section class="activity-input">
+        <h2>Track Your Daily Activity</h2>
+        <form id="activity-form">
+          <label for="steps">Steps:</label>
+          <input type="number" id="steps" placeholder="Enter steps" required>
+          <label for="calories">Calories Burned:</label>
+          <input type="number" id="calories" placeholder="Enter calories" required>
+          <label for="distance">Distance (km):</label>
+          <input type="number" id="distance" placeholder="Enter distance" required>
+          <button type="submit">Add Activity</button>
+        </form>
+      </section>
+
+      <!-- Statistics Section -->
+      <section class="statistics">
+        <h2>Your Weekly Stats</h2>
+        <div id="stats-output">
+          <!-- Graph Canvas for displaying the chart -->
+          <canvas id="weeklyStatsChart"></canvas>
+        </div>
+      </section>
+    </div>
+    <!-- Personalized Workout Plan -->
+    <section class="workout-plan">
+      <h2>Personalized Workout Plan</h2>
+      <p>Select your fitness level to get a workout plan:</p>
+      <label>
+        <input type="radio" name="fitness-level" value="beginner">
+        Beginner
+      </label>
+      <label>
+        <input type="radio" name="fitness-level" value="intermediate">
+        Intermediate
+      </label>
+      <label>
+        <input type="radio" name="fitness-level" value="advanced">
+        Advanced
+      </label>
+      <ul id="workout-plan-list">
+        <!-- Dynamic workout plans will be rendered here -->
+      </ul>
+      <p>Tip: Rest days are important! Be sure to give your muscles time to recover.</p>
+      <button id="generate-workout-plan">Generate Workout Plan</button>
+   
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

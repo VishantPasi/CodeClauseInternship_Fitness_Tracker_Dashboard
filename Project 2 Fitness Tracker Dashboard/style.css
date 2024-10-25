@@ -1,0 +1,174 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #9fd8ff;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+header {
+  background: linear-gradient(135deg, #30b86d, #007bff);
+  color: rgb(43, 43, 43);
+  padding: 2rem;
+  text-align: left;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.253);
+  border-radius: 0 0 20px 20px;
+  border-bottom: 1px solid rgb(43, 43, 43);
+  border-left: 1px solid rgb(43, 43, 43);
+  border-right: 1px solid rgb(43, 43, 43);
+  
+}
+
+header h1 {
+  font-size: 2.0rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 600;
+  transition: letter-spacing 0.3s ease;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/* Main Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem;
+}
+
+.top-section {
+  display: flex; /* Enable flexbox for side-by-side layout */
+  justify-content: space-between; /* Distribute space between the two sections */
+  gap: 2.5rem; /* Add space between sections */
+  margin-bottom: 3rem; /* Space between the top section and workout plan */
+}
+
+/* Form Section (Track Activity) */
+.activity-input, .statistics {
+  flex: 1; /* Equal space for each section */
+  background-color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid black;
+}
+
+.activity-input:hover, .statistics:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.activity-input h2, .statistics h2, .workout-plan h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #3c91e6;
+  padding-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+input {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: 1px solid #dde2e6;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+input:focus {
+  outline: none;
+  border-color: #3c91e6;
+  box-shadow: 0 0 0 4px rgba(60, 145, 230, 0.2);
+}
+
+button {
+  padding: 1rem 1.2rem;
+  font-size: 1.2rem;
+  background-color: #3c91e6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2b6bb9;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(43, 107, 185, 0.3);
+}
+
+#stats-output {
+  
+  margin-top: 2rem;
+  background-color: #f7faff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+#stats-output:hover {
+  transform: translateY(-3px);
+}
+
+#stats-output p {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+  color: #555;
+}
+
+/* Workout Plan Section */
+.workout-plan {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border: 1px solid black;
+}
+
+.workout-plan:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1000px) {
+  .top-section {
+    flex-direction: column; /* Stack the two sections on smaller screens */
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  input, button {
+    font-size: 1rem;
+  }
+
+  form {
+    gap: 1rem;
+  }
+}
